@@ -21,3 +21,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 Route::resource('product', BarangController::class);
+
+Route::get('/login', function () {
+    return view('login.login');
+});
