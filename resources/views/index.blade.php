@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img alt="..." class="d-block w-100" src="http://via.placeholder.com/300x300">
+				<img alt="..." class="d-block w-100" src="{{asset('img/slide2.jpg')}}">
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Find our interesting product here!</p>
@@ -65,10 +65,10 @@
 			<div class="row">
 				<div class="col-lg-4 col-md-12 col-12">
 					<div class="about-img">
-                        <img alt="" class="img-fluid" src="http://via.placeholder.com/300x300">
+                        <img alt="" class="img-fluid" src="{{asset('img/pouch-pink.png')}}" style="width:300px; height:300px;">
                     </div>
 				</div>
-				<div class="col-lg-8 col-md-12 col-12 ps-lg-4 mt-md-5">
+				<div class="col-lg-8 col-md-12 col-12 mt-md-5">
 					<div class="about-text">
 						<h2>Tentang Kami</h2>
 						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 

@@ -43,14 +43,14 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img alt="..." class="d-block w-100" src="img/home-1.jpg">
+				<img alt="..." class="d-block w-100" src="{{asset('img/slide2.jpg')}}">
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Your one stop crocheting appliances</p>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img alt="..." class="d-block w-100" src="http://via.placeholder.com/300x300">
+				<img alt="..." class="d-block w-100" src="{{asset('img/slide1.jpg')}}">
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Find our interesting product here!</p>
@@ -63,27 +63,33 @@
             <span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
 	</div>
     
-    
-    
-    <!-- about section starts -->
-	<section class="about section-padding" id="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-12 col-12">
-					<div class="about-img">
-                        <img alt="" class="img-fluid" src="http://via.placeholder.com/300x300">
+    <div class="container text-center product mt-5">
+        <h1>Our Products</h1>
+    </div>
+
+    <div class="container text-center mb-5">
+        <div class="row">
+            @foreach ($barang as $rowbarang)
+            <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img src="{{asset('img/' . $rowbarang->foto)}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
+                    <div class="card-body">
+                        <h3>{{ $rowbarang->nama }}</h3>
+                        <p>Deskripsi</p>
+                        <h5>{{ $rowbarang->harga }}</h5>
                     </div>
-				</div>
-				<div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-					<div class="about-text">
-						<h2>We Provide the Best Quality<br>
-						Services Ever</h2>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, labore reiciendis. Assumenda eos quod animi! Soluta nesciunt inventore dolores excepturi provident, culpa beatae tempora, explicabo corporis quibusdam corrupti. Autem, quaerat. Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p><a class="btn btn-warning" href="#">Learn More</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!-- about section Ends -->
+                    <div class="btn">
+                        <a href="/cart" class="btn btn-warning">
+                            <i class="fa-solid fa-eye"></i> Preview</a>
+                    </div>
+                </div>
+            </div>
+            @if ($loop->iteration % 4 == 0)
+            </div><div class="row">
+            @endif
+            @endforeach
+        </div>
+    </div>
 
     <footer class="bg-dark text-white pt-5 pb-5">
     <div class="container text-md-left">
