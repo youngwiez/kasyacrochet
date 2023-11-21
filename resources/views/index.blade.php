@@ -5,13 +5,13 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Bootstrap 5 Responsive Landing Page Design</title>
+	<title>KaSya Crochet</title>
 	<!-- All CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 	<link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 <body>
@@ -68,19 +68,58 @@
                         <img alt="" class="img-fluid" src="http://via.placeholder.com/300x300">
                     </div>
 				</div>
-				<div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+				<div class="col-lg-8 col-md-12 col-12 ps-lg-4 mt-md-5">
 					<div class="about-text">
-						<h2>We Provide the Best Quality<br>
-						Services Ever</h2>
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, labore reiciendis. Assumenda eos quod animi! Soluta nesciunt inventore dolores excepturi provident, culpa beatae tempora, explicabo corporis quibusdam corrupti. Autem, quaerat. Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p><a class="btn btn-warning" href="#">Learn More</a>
+						<h2>Tentang Kami</h2>
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                            Totam, labore reiciendis. Assumenda eos quod animi! 
+                            Soluta nesciunt inventore dolores excepturi provident, 
+                            culpa beatae tempora, explicabo corporis quibusdam corrupti. 
+                            Autem, quaerat. Assumenda quo aliquam vel, nostrum explicabo ipsum dolor, 
+                            ipsa perferendis porro doloribus obcaecati placeat natus iste odio est non earum?</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section><!-- about section Ends -->
 
-	<!-- All Js -->
-	<script src="js/bootstrap.bundle.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <footer class="bg-dark text-white pt-5 pb-5">
+    <div class="container text-md-left">
+      <div class="row text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="mb-4 font-weight-bold text-warning">KaSya Crochet</h5>
+          <p>Your one-stop crocheting appliances</p>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="mb-4 font-weight-bold text-warning">Find Us</h5>
+          <p><a href="#" class="text-light" style="text-decoration: none">
+            Jl. Mbakalan No. 61D, <br>Ngabean Wetan RT. 02 RW. 37,
+            Sinduharjo, Ngaglik, Sleman, Yogyakarta 55581</a></p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mt-3">
+          <h5 class="mb-4 font-weight-bold text-warning">Reach Us</h5>
+          <p><i class="fa-brands fa-whatsapp"></i>
+          <a href="#" class="text-light" style="text-decoration: none">  +62 821-4038-8090</p>
+          <p><i class="fa-brands fa-instagram"></i>
+            <a href="#" class="text-light" style="text-decoration: none">  kasyacrochet</a></p>
+        </div>
+
+        <div class="row text-md-left">
+          <div class="col-md-7 col-lg-12 mt-5 text-center">
+            <p>Copyright ©2023 All rights reserved by
+              <a href="#" class="text-warning" style="text-decoration: none">KaSya Crochet</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 </html>
