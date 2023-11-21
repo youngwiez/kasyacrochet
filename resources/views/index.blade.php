@@ -47,7 +47,7 @@
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Your one stop crocheting appliances</p>
-					<p><a class="btn btn-warning mt-3" href="#">Learn More</a></p>
+					<p><a class="btn btn-warning mt-3" href="#about">Learn More</a></p>
 				</div>
 			</div>
 			<div class="carousel-item">
@@ -55,11 +55,13 @@
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Find our interesting product here!</p>
-					<p><a class="btn btn-warning mt-3" href="#">Learn More</a></p>
+					<p><a class="btn btn-warning mt-3" href="#product">Our Products</a></p>
 				</div>
 			</div>
 		</div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
-	</div><!-- about section starts -->
+	</div>
+    
+    <!-- about section starts -->
 	<section class="about section-padding" id="about">
 		<div class="container">
 			<div class="row">
@@ -82,6 +84,56 @@
 			</div>
 		</div>
 	</section><!-- about section Ends -->
+
+    <div class="container text-center product">
+        <h1>Our Top Products</h1>
+    </div>
+
+    <section id="product">
+    <div class="container text-center mb-5">
+        <div class="row">
+            <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img src="{{asset('img/tas-kanyak.jpg')}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
+                    <div class="card-body">
+                        <h3>Tas Rajut</h3>
+                        <h5>Rp200.000,00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img src="{{asset('img/dompet-stroberi.png')}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
+                    <div class="card-body">
+                        <h3>Dompet Rajut</h3>
+                        <h5>Rp50.000,00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img src="{{asset('img/oval-bag.jpg')}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
+                    <div class="card-body">
+                        <h3>Ganci Rajut</h3>
+                        <h5>Rp50.000,00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img src="{{asset('img/tube-bag.jpg')}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
+                    <div class="card-body">
+                        <h3>Sepatu Rajut</h3>
+                        <h5>Rp300.000,00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="btn mt-3" style="border:none;">
+                <a href="/product" class="btn btn-warning">See More</a>
+            </div>
+        </div>
+    </div>
+    </section>
 
     <footer class="bg-dark text-white pt-5 pb-5">
     <div class="container text-md-left">

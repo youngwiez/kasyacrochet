@@ -78,9 +78,16 @@
                         <p>Deskripsi</p>
                         <h5>{{ $rowbarang->harga }}</h5>
                     </div>
-                    <div class="btn">
-                        <a href="/cart" class="btn btn-warning">
-                            <i class="fa-solid fa-eye"></i> Preview</a>
+                    <div class="btn" style="border:none;">
+                        <a href="/edit" class="btn btn-success">
+                            <i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                        <form method="POST" action="{{ route('delete', $rowbarang->id) }}" style="display:inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data?')">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
