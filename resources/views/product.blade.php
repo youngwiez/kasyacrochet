@@ -51,7 +51,7 @@
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img alt="..." class="d-block w-100" src="img/home-2.jpg">
+				<img alt="..." class="d-block w-100" src="http://via.placeholder.com/300x300">
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Find our interesting product here!</p>
@@ -64,7 +64,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-12 col-12">
-					<div class="about-img"><img alt="" class="img-fluid" src="img/about.jpg"></div>
+					<div class="about-img">
+                        <img alt="" class="img-fluid" src="http://via.placeholder.com/300x300">
+                    </div>
 				</div>
 				<div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
 					<div class="about-text">
@@ -76,7 +78,7 @@
 			</div>
 		</div>
 	</section><!-- about section Ends -->
-    
+
 	<!-- All Js -->
 	<script src="js/bootstrap.bundle.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
