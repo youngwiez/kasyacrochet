@@ -43,7 +43,7 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img alt="..." class="d-block w-100" src="img/home-1.jpg">
+				<img alt="..." class="d-block w-100" src="{{asset('img/slide1.jpg')}}">
 				<div class="carousel-caption">
 					<h5>KaSya Crochet</h5>
 					<p>Your one stop crocheting appliances</p>
