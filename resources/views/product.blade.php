@@ -65,6 +65,7 @@
     
     <div class="container text-center product mt-5">
         <h1>Our Products</h1>
+        <a href="/add" class="btn btn-warning">Add Product</a>
     </div>
 
     <div class="container text-center mb-5">
@@ -79,14 +80,11 @@
                         <h5>{{ $rowbarang->harga }}</h5>
                     </div>
                     <div class="btn" style="border:none;">
-                        <a href="/edit" class="btn btn-success">
-                            <i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                        <form method="POST" action="{{ route('delete', $rowbarang->id) }}" style="display:inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data?')">
-                            @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-pen-to-square"></i> Edit</button>
+                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('product.destroy', $rowbarang->id) }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-danger">
-                                <i class="fa-solid fa-trash"></i> Delete
-                            </button>
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</button>
                         </form>
                     </div>
                 </div>
