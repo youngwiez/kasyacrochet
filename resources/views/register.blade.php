@@ -23,7 +23,7 @@
                 <h1>Nice to Know You!</h1>
                 <p>Welcome back! Please enter your details.</p>
               </div>
-              <form method="POST" action="{{ route('register.action') }}">
+              <form method="POST" action="register">
                 @csrf
                 <div class="login-form">
                   <label for="name" class="form-label">Name</label>
@@ -38,7 +38,7 @@
                   <button type="submit" class="signin btn btn-warning">Register</button>
 
                   <div class="text-center">
-                    <span class="d-inline">Don't have an account? <a href="/register" class="signup d-inline text-decoration-none">Sign up for free</a></span>
+                    <span class="d-inline">Already have an account? <a href="/login" class="signup d-inline text-decoration-none">Login Now!</a></span>
                 </div>
               </form>
               

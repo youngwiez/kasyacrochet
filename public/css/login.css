@@ -79,7 +79,7 @@
     .login-form span a {
         font-weight: 600;
     }
-    /*.login-right h5 {
+    .login-right h5 {
         color: #FFF;
         text-align: center;
         text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
@@ -87,4 +87,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-    } */
+    }
+    .login-left, .login-right {
+        height: 100%;
+    }

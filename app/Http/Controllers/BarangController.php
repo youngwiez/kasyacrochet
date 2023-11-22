@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Barang;
-use DB;
 use Illuminate\Support\Facades\Storage;
 
 class BarangController extends Controller
@@ -16,7 +15,6 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barang = Barang::select('SELECT * FROM barang');
         $barang = Barang::latest()->paginate(10);
         return view('product',compact('barang'));
     }
@@ -70,7 +68,12 @@ class BarangController extends Controller
      */
     public function show($id)
     {
-        //
+        $barang = Barang::find($id);
+
+        //return $rsetSiswa;
+
+        //return view
+        return view('show', compact('barang'));
     }
 
     /**

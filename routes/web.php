@@ -26,7 +26,9 @@ Route::resource('product', BarangController::class);
 
 Route::get('login', [LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('login', [LoginController::class,'authenticate']);
+
+Route::get('logout', [LoginController::class,'logout']);
 Route::post('logout', [LoginController::class,'logout']);
 
-Route::get('register', [RegisterController::class, 'register']);
-Route::post('register', [RegisterController::class, 'register_action'])->name('register.action');
+Route::post('register', [RegisterController::class,'store']);
+Route::get('register', [RegisterController::class,'create']);

@@ -70,7 +70,7 @@
 
     <div class="container text-center mb-5">
         <div class="row">
-            @foreach ($barang as $rowbarang)
+            @forelse ($barang as $rowbarang)
             <div class="col-md-3 mt-4">
                 <div class="card">
                     <img src="{{asset('img/' . $rowbarang->foto)}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
@@ -80,12 +80,13 @@
                         <h5>{{ $rowbarang->harga }}</h5>
                     </div>
                     <div class="btn" style="border:none;">
-                        <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-pen-to-square"></i> Edit</button>
-                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('product.destroy', $rowbarang->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</button>
-                        </form>
+                      <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="" method="POST">
+                        <a href="" class="btn btn-sm btn-dark"><i class="fa fa-eye"></i></a>
+                        <a href="" class="btn btn-sm btn-primary"><i class="fa fa-pencil-alt"></i></a>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+                      </form>
                     </div>
                 </div>
             </div>
