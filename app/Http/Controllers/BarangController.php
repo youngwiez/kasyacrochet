@@ -49,15 +49,16 @@ class BarangController extends Controller
         $foto->storeAs('public/foto', $foto->hashName());
 
         //create post
-        Siswa::create([
+        Barang::create([
             'nama'        => $request->nama,
-            'harga'       => $request->nis,
-            'deskripsi'   => $request->gender,
+            'harga'       => $request->harga,
+            'deskripsi'   => $request->deskripsi,
             'foto'        => $foto->hashName()
         ]);
 
         //redirect to index
-        return redirect()->route('product')->with(['success' => 'Data Produk Berhasil Disimpan!']);
+        return redirect()->route('product')
+        ->with(['success' => 'Data Produk Berhasil Disimpan!']);
     }
 
     /**
@@ -115,6 +116,7 @@ class BarangController extends Controller
         $barang->delete();
 
         //redirect to index
-        return redirect()->route('product')->with(['success' => 'Data Berhasil Dihapus!']);
+        return redirect()->route('product')
+        ->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }
