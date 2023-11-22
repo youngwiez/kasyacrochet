@@ -23,3 +23,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 Route::resource('product', BarangController::class);
+
+Route::get('login', [LoginController::class,'index'])->name('login')->middleware('guest');
+Route::post('login', [LoginController::class,'authenticate']);
+Route::post('logout', [LoginController::class,'logout']);
+
+Route::get('register', [RegisterController::class, 'register']);
+Route::post('register', [RegisterController::class, 'register_action'])->name('register.action');

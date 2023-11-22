@@ -18,24 +18,28 @@
     <section class="login d-flex justify-content-between">
         <div class="login-left w-50 h-100">
           <div class="row justify-content-center align-items-center h-100">
-            <div class="col-6">
+            <div class="col-7">
               <div class="header">
                 <h1>Welcome back</h1>
                 <p>Welcome back! Please enter your details.</p>
               </div>
+              <form method="POST" action="{{ url('/product') }}">
               <div class="login-form">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
 
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password">
+                
                 <a href="#" class="text-decoration-none text-center">Forgot password</a>
-                <button class="signin btn btn-warning">Sign In</button>
+                
+                <button type="submit" class="signin btn btn-warning">Sign In</button>
 
                 <div class="text-center">
                   <span class="d-inline">Don't have an account? <a href="/register" class="signup d-inline text-decoration-none">Sign up for free</a></span>
                 </div>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
 

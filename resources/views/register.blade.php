@@ -18,23 +18,30 @@
     <section class="login d-flex justify-content-between">
         <div class="login-left w-50 h-100">
           <div class="row justify-content-center align-items-center h-100">
-            <div class="col-6">
+            <div class="col-7">
               <div class="header">
                 <h1>Nice to Know You!</h1>
                 <p>Welcome back! Please enter your details.</p>
               </div>
-              <div class="login-form">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              <form method="POST" action="{{ route('register.action') }}">
+                @csrf
+                <div class="login-form">
+                  <label for="name" class="form-label">Name</label>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Enter your name">
 
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
-                <a href="#" class="text-decoration-none text-center">Forgot password</a>
-                <button class="signin btn btn-warning">Sign In</button>
+                  <label for="email" class="form-label">Email</label>
+                  <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
 
-                <div class="text-center">
-                  <span class="d-inline">Don't have an account? <a href="#" class="signup d-inline text-decoration-none">Sign up for free</a></span>
+                  <label for="password" class="form-label">Password</label>
+                  <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password">
+                  <br>                
+                  <button type="submit" class="signin btn btn-warning">Register</button>
+
+                  <div class="text-center">
+                    <span class="d-inline">Don't have an account? <a href="/register" class="signup d-inline text-decoration-none">Sign up for free</a></span>
                 </div>
+              </form>
+              
             </div>
           </div>
         </div>

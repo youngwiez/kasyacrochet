@@ -2,7 +2,8 @@
     font-family: 'Cinzel', serif;
 }
 body {
-	background: #f1fbff;
+    background: #f1fbff;
+    font-family: 'Poppins', sans-serif;
 }
 
 .login {
@@ -15,6 +16,7 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    margin-top: 10px;
 }
 
 .header p {
@@ -23,7 +25,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 .login-form label {
@@ -33,6 +35,7 @@ body {
     font-weight: 400;
     line-height: normal;
     margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .login-form input {
@@ -41,6 +44,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .login-form a {
@@ -74,8 +79,7 @@ body {
 .login-form span a {
     font-weight: 600;
 }
-
-/* .login-right h5 {
+/*.login-right h5 {
     color: #FFF;
     text-align: center;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
