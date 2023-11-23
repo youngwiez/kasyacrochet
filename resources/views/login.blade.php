@@ -15,51 +15,45 @@
 </head>
 <body>
 
-<section class="login">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 login-left">
-                <div class="row justify-content-center align-items-center h-100">
-                    <div class="col-7">
-                        <div class="header">
-                            <h1>Welcome back</h1>
-                            <p>Welcome back! Please enter your details.</p>
-                        </div>
-                        <form method="POST" action="login">
-                            @csrf
-                            <div class="login-form">
-                                <label for="email" class="form-label">Email</label>
-                                <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
-
-                                <label for="password" class="form-label">Password</label>
-                                <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password">
-
-                                <a href="#" class="text-decoration-none text-center">Forgot password</a>
-
-                                <button type="submit" class="signin btn btn-warning">Sign In</button>
-
-                                <div class="text-center">
-                                    <span class="d-inline">Don't have an account? <a href="/register" class="signup d-inline text-decoration-none">Sign up for free</a></span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+<section class="login d-flex">
+    <div class="login-left w-50 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-7">
+                <div class="header">
+                    <h1>Welcome back</h1>
+                    <p>Welcome back! Please enter your details.</p>
                 </div>
-            </div>
 
-            <div class="col-md-6 login-right bg-warning" style="height:100%;">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{asset('img/slide1.jpg')}}" class="d-block w-100" alt="#">
-                            <div class="carousel-caption d-none d-md-block">
-                            </div>
-                        </div>
+                <form method="POST" action="login">
+                    @csrf
+                    <div class="login-form">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
+
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" type="password" class="form-control" id="password" placeholder="Enter your password">
+                    <br>
+                    <a href="#" class="text-decoration-none text-center">Forgot password</a>                
+                    <button type="submit" class="signin btn btn-warning">Login</button>
+
+                    <div class="text-center">
+                        <span class="d-inline">Don't have an account? <a href="/register" class="signup d-inline text-decoration-none">Sign up for free</a></span>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+
+    <!-- <div class="login-right bg-warning w-50 h-100">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{asset('img/slide1.jpg')}}" class="d-block w-100" alt="#">
+                    <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+    </div> -->
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -64,38 +64,58 @@
 	</div>
     
     <div class="container text-center product mt-5">
-        <h1>Our Products</h1>
-        <a href="/add" class="btn btn-warning">Add Product</a>
+        <h1>Your Shopping Cart</h1>
     </div>
-
-    <div class="container text-center mb-5">
-        <div class="row">
-            @forelse ($barang as $rowbarang)
-            <div class="col-md-3 mt-4">
-                <div class="card">
-                    <img src="{{asset('img/' . $rowbarang->foto)}}" class="card-image-top" alt="..." style="object-fit: cover; height: 250px; width: 100%; border-radius:4px">
-                    <div class="card-body">
-                        <h3>{{ $rowbarang->nama }}</h3>
-                        <p>Deskripsi</p>
-                        <h5>{{ $rowbarang->harga }}</h5>
-                    </div>
-                    <div class="btn" style="border:none;">
-                    <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('product.destroy', $rowbarang->id) }}" method="POST">
-                      <a href="{{ route('product.show', $rowbarang->id) }}" class="btn btn-sm btn-dark"><i class="fa fa-eye"></i></a>
-                      <a href="{{ route('product.edit', $rowbarang->id) }}" class="btn btn-sm btn-primary"><i class="fa fa-pencil-alt"></i></a>
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
-                    </form>
-                    </div>
-                </div>
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <div class="col-md-8">
+        <div class="card mt-3" style="max-width: 700px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="..." class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Produk 1</h5>
+              <p class="card-text" class="text-muted">Catatan: </p>
+              <p class="card-text" class="text-muted">Jumlah: </p>
+              <p class="card-text" class="text-muted">Harga: </p>
             </div>
-            @if ($loop->iteration % 4 == 0)
-            </div><div class="row">
-            @endif
-            @endforeach
+          </div>
         </div>
+      </div>
     </div>
+    
+    <div class="col-md-4">
+      <div class="card mt-3" style="max-width: 700px;">
+        <div class="card-body">
+          <h5 class="card-title">Summary</h5>
+          <p class="card-text">Subtotal:</p>
+          <button type="button" class="btn btn-warning" style="width:100%" data-bs-dismiss="modal">
+            <i class="fa-solid fa-money-bill-wave"></i> Confirm Payment
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-3" style="max-width: 700px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="..." class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Produk 2</h5>
+          <p class="card-text" class="text-muted">Catatan: </p>
+          <p class="card-text" class="text-muted">Jumlah: </p>
+          <p class="card-text" class="text-muted">Harga: </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <footer class="bg-dark text-white pt-5 pb-5">
     <div class="container text-md-left">

@@ -106,17 +106,23 @@ class BarangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
         $barang = Barang::find($id);
-        //delete image
-        Storage::delete('public/foto/'. $barang->foto);
 
-        //delete post
+        // Check if barang exists
+        if (!$barang) {
+            return redirect()->route('product')->with(['error' => 'Data not found']);
+        }
+
+        // Delete image
+        Storage::delete('public/foto/' . $barang->foto);
+
+        // Delete post
         $barang->delete();
 
-        //redirect to index
-        return redirect()->route('product')
-        ->with(['success' => 'Data Berhasil Dihapus!']);
+        // Redirect to index
+        return redirect()->route('product')->with(['success' => 'Data Berhasil Dihapus!']);
     }
+
 }

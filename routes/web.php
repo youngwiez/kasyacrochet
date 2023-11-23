@@ -22,7 +22,21 @@ Route::get('/', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/show', function () {
+    return view('show');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/products', function () {
+    return view('products');
+});
+
 Route::resource('product', BarangController::class);
+Route::delete('product/{product}', [BarangController::class, 'destroy'])->name('product.destroy');
 
 Route::get('login', [LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('login', [LoginController::class,'authenticate']);

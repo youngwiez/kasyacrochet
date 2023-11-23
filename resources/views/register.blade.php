@@ -15,7 +15,7 @@
   </head>
   <body>
 
-    <section class="login d-flex justify-content-between">
+    <section class="login d-flex">
         <div class="login-left w-50 h-100">
           <div class="row justify-content-center align-items-center h-100">
             <div class="col-7">
